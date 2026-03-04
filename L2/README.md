@@ -4,28 +4,28 @@ In object-oriented programming, a constructor is a special method used to initia
 
 1. What is a Constructor?
 
-· A constructor is automatically called when you create an instance (object) of a class.
-· Its main purpose is to initialize the instance members (attributes) of the class.
-· Every class must have a constructor; if you don't define one, Python provides a default (empty) constructor.
-· You can have multiple constructors? No – Python does not support multiple constructors directly, but you can simulate them using default arguments or class methods.
+- constructor is automatically called when you create an instance (object) of a class.
+- Its main purpose is to initialize the instance members (attributes) of the class.
+- Every class must have a constructor; if you don't define one, Python provides a default (empty) constructor.
+- You can have multiple constructors? No – Python does not support multiple constructors directly, but you can simulate them using default arguments or class methods.
 
 Types of Constructors
 
 1. Non-parameterized (Default) Constructor
-   · Takes no arguments (except self).
-   · If you don't define any __init__, Python automatically provides one that does nothing.
+   - Takes no arguments (except self).
+   - If you don't define any __init__, Python automatically provides one that does nothing.
 2. Parameterized Constructor
-   · Takes one or more arguments (besides self).
-   · Used to initialize object attributes with specific values at creation time.
+   - Takes one or more arguments (besides self).
+   - Used to initialize object attributes with specific values at creation time.
 
 ---
 
 2. Python's __init__ Method
 
-· __init__ is a reserved method in Python classes.
-· It is called immediately after the object is created (but before it is returned to the caller).
-· The first parameter is always self, which refers to the current instance.
-· You can pass any number of additional arguments when creating an object; these must match the __init__ method's signature (except self).
+- __init__ is a reserved method in Python classes.
+- It is called immediately after the object is created (but before it is returned to the caller).
+- The first parameter is always self, which refers to the current instance.
+- You can pass any number of additional arguments when creating an object; these must match the __init__ method's signature (except self).
 
 Example of a Parameterized Constructor
 
@@ -116,9 +116,9 @@ r3 = Rectangle(5, 10)   # length=5, width=10
 
 5. Instance Methods
 
-· Instance methods are functions defined inside a class that operate on instances of that class.
-· They always take self as the first parameter, which gives them access to the instance's attributes and other methods.
-· They can modify object state or perform actions using the object's data.
+- Instance methods are functions defined inside a class that operate on instances of that class.
+- They always take self as the first parameter, which gives them access to the instance's attributes and other methods.
+- They can modify object state or perform actions using the object's data.
 
 Example
 
@@ -146,11 +146,10 @@ Instance methods are the most common type of methods in Python classes.
 
 ---
 
-Summary Table
 
-Concept Description Example
-Constructor Special method __init__ called at object creation. Initializes attributes. def __init__(self, ...):
-Non‑parameterized Constructor with no extra parameters (only self). def __init__(self): or implicit default.
-Parameterized Constructor that accepts arguments to set initial values. def __init__(self, name, age):
-Instance Method Regular method that works on an instance; first parameter is self. def method(self):
-
+| **Concept** | **Description** | **Example** |
+|-------------|-------------|-------------|
+| **Constructor** | Special method `__init__` called at object creation. Initializes attributes. | `def __init__(self, ...):` |
+| **Non‑parameterized Constructor** | Constructor with no extra parameters (only self). | `def __init__(self):` or implicit default |
+| **Parameterized Constructor** | Constructor that accepts arguments to set initial values. | `def __init__(self, name, age):` |
+| **Instance Method** | Regular method that works on an instance; first parameter is self. | `def method(self):` |
